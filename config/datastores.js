@@ -48,10 +48,7 @@ module.exports.datastores = {
     *    (See https://sailsjs.com/config/datastores for help.)                 *
     *                                                                          *
     ***************************************************************************/
-    // adapter: 'sails-mysql',
-    // url: 'mysql://user:password@host:port/database',
-
+    adapter: 'sails-mysql',
+    url: 'mysql://nova@nova-leaf:Test1234@nova-leaf.mysql.database.azure.com:3306/novaleaf',
   },
-
-
 };
