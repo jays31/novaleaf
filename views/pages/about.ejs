@@ -4,9 +4,18 @@
 <head>
   <link rel="stylesheet" href="styles/footer.css">
   <link rel="stylesheet" href="styles/timeline.css">
+
   <style>
     #hidden {
       overflow: hidden;
+    }
+
+    #bar {
+      position: absolute;
+      left: 0;
+      right: 0;
+      padding: 15px;
+      background-size: 100%;
     }
   </style>
 
@@ -14,159 +23,52 @@
 
 <body>
   <div class="container">
-    <div class="page-header text-center">
-      <br><br><br>
-      <h1 id="timeline">Our Team</h1>
-    </div>
-    <ul class="timeline">
-
-      <li>
-        <div class="timeline-badge primary"><a><i class="glyphicon glyphicon-record" rel="tooltip"
-              title="11 hours ago via Twitter" id=""></i></a></div>
-        <div class="timeline-panel">
-          <div class="row">
-            <div class="col-4 my-auto">
-              <div class="timeline-heading" id="hidden">
-                <center><img class="img-responsive"
-                    src="http://novaleafedu.azurewebsites.net/images/DavidCaldwell.png" /></center>
-              </div>
-            </div>
-            <div class="col-8">
-              <div class="timeline-body">
-                <p>I have over 5 years of experience teaching children, teenagers and adults. My expertise includes conversational fluency, resume/cover letter writing and test preparation. Above all else, I help my students grow more confident in their English abilities and help their academic and professional careers.</p>
-              </div>
-            </div>
-          </div>
-          <div class="timeline-footer">
-            <a><i class="glyphicon glyphicon-thumbs-up"></i></a>
-            <a><i class="glyphicon glyphicon-share"></i></a>
-            <a class="pull-right">ESL Instructor</a>
-            <p><b>David Caldwell</b></p>
-          </div>
-        </div>
-      </li>
-      <li class="timeline-inverted">
-        <div class="timeline-badge primary"><a><i class="glyphicon glyphicon-record invert" rel="tooltip"
-              title="11 hours ago via Twitter" id=""></i></a></div>
-        <div class="timeline-panel">
-          <div class="row">
-            <div class="col-4 my-auto">
-              <div class="timeline-heading" id="hidden">
-                <center><img class="img-responsive" src="http://novaleafedu.azurewebsites.net/images/SoniaJain.png" />
-                </center>
-              </div>
-            </div>
-            <div class="col-lg-8">
-              <div class="timeline-body">
-                <p>I have pursued Master's in Technology (Electronics and Communication). I have 12+ years of experience in teaching undergraduate engineering courses to my credit. I am well equipped with the knowledge of handling Mathematics, Physics and Robotics Courses at school, secondary and undergraduate levels and applying technology to teaching.</p>
-              </div>
-            </div>
-          </div>
-          <div class="timeline-footer">
-            <a><i class="glyphicon glyphicon-thumbs-up"></i></a>
-            <a><i class="glyphicon glyphicon-share"></i></a>
-            <a class="pull-right">Sonia Jain</a>
-            <p><b>Robotics, Mathematics & Physics</b></p>
-          </div>
-        </div>
-      </li>
-      <li>
-        <div class="timeline-badge primary"><a><i class="glyphicon glyphicon-record" rel="tooltip"
-              title="11 hours ago via Twitter" id=""></i></a></div>
-        <div class="timeline-panel">
-          <div class="row">
-            <div class="col-8">
-              <div class="timeline-body">
-                <p>I have experience in teaching. I teach children how to build and program an ev3 robot. For me teaching is fun and interesting. And I am looking forward to teach more about ev3.</p>
-              </div>
-            </div>
-            <div class="col-4 my-auto">
-              <div class="timeline-heading" id="hidden">
-                <center><img class="img-responsive"
-                    src="http://localhost:1337/images/Mary-Anne Kulykova.png" /></center>
-              </div>
-            </div>
-          </div>
-          <div class="timeline-footer">
-            <a><i class="glyphicon glyphicon-thumbs-up"></i></a>
-            <a><i class="glyphicon glyphicon-share"></i></a>
-            <a class="pull-right">Mary-Anne Kulykova</a>
-            <p><b>EV3 Robot Programming</b></p>
-          </div>
-        </div>
-      </li>
-
-      <li class="timeline-inverted">
-        <div class="timeline-badge primary"><a><i class="glyphicon glyphicon-record invert" rel="tooltip"
-              title="11 hours ago via Twitter" id=""></i></a></div>
-        <div class="timeline-panel">
-          <div class="timeline-body">
-            <p>Having the passion about tutoring, I love to teach new concepts to the students and implementing those in practical. My areas of expertise are object-oriented programming languages such as C, C++, Java and all of the core and advanced computer science subjects like Artificial Intelligence, Network Security and Robotics. I am also equipped in handling students from varied national and cultural backgrounds by enabling the learning as enjoyable.</p>
-          </div>
-          <div class="timeline-footer">
-            <a><i class="glyphicon glyphicon-thumbs-up"></i></a>
-            <a><i class="glyphicon glyphicon-share"></i></a>
-            <a class="pull-right">Deepalakshmi Senthilkumar</a>
-            <p><b>C, C++, Java</b></p>
-          </div>
-        </div>
-      </li>
-
-      <li>
-        <div class="timeline-badge primary"><a><i class="glyphicon glyphicon-record" rel="tooltip"
-              title="11 hours ago via Twitter" id=""></i></a></div>
-        <div class="timeline-panel">
-          <div class="timeline-heading">
-            <img class="img-responsive" src=" " />
-          </div>
-          <div class="timeline-body">
-            <p>She got her Master's degree in English language and literature.She attended TESOL program in University of Queensland in Australia. With 18 years of College English, SAT, IELTS, TOEFL, GMAT, GRE teaching experience，she is rich in tutoring students to improve their scores in IELTS and other international tests.</p>
-          </div>
-          <div class="timeline-footer">
-            <a><i class="glyphicon glyphicon-thumbs-up"></i></a>
-            <a><i class="glyphicon glyphicon-share"></i></a>
-            <a class="pull-right">Huiling Ma (Maggie)</a>
-            <p><b>Language / IELTS</b></p>
-          </div>
-        </div>
-      </li>
-
-      <li class="timeline-inverted">
-        <div class="timeline-badge primary"><a><i class="glyphicon glyphicon-record invert" rel="tooltip"
-              title="11 hours ago via Twitter" id=""></i></a></div>
-        <div class="timeline-panel">
-          <div class="timeline-heading">
-            <img class="img-responsive" src=" " />
-          </div>
-          <div class="timeline-body">
-            <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.
+    <br><br>
+    <!-- start banner Area -->
+    <section class="banner-area" id="bar">
+      <div class="container">
+        <div class="row justify-content-start align-items-center">
+          <div class="col-lg col-md-12">
+            <h1 class="text-white">
+              <br>Training Institute
+            </h1>
+            <p class="mx-auto text-white  mt-20 mb-40" align="justify">
+              Novaleaf is an Education Institute founded in 2014, located in Halifax, Canada and Beijing, China.
+              Novaleaf is
+              committed to providing the students with the assistance to their on-going academic curriculum at different
+              levels/grades of school education. With small groups of students and our expert faculty members from
+              industry
+              and academia, we not only focus on enhancing the academic performance of a child but also try to bridge
+              the gap
+              between the school curriculum and the industry requirements. We provide flexible and customized support to
+              the
+              students keeping in mind their needs and requirements. Apart from academic support for various courses
+              (Science
+              and Mathematics) we also provide courses pertaining to STEAM through Robotics & LEGO. We also cover the
+              spheres
+              of providing English language training, IELTS training, business English training, University courses
+              tutoring,
+              education consultation and career training. We completely understand and appreciate the fact that no two
+              people
+              have same or even similar hurdles in life in terms of building a career, fetching the right job or even
+              otherwise. Sticking to this notion, we strongly believe that customizing the curriculum is the key
+              criteria to
+              provide the best possible solution. Adhering to our unique understanding of the needs and requirements, we
+              carefully craft our curriculum to get the best results.
             </p>
           </div>
-          <div class="timeline-footer primary">
-            <a><i class="glyphicon glyphicon-thumbs-up"></i></a>
-            <a><i class="glyphicon glyphicon-share"></i></a>
-            <a class="pull-right">Jay Sharma</a>
-            <p><b>Full Stack Developer</b></p>
-          </div>
         </div>
-      </li>
+      </div>
+    </section>
+    <!-- End banner Area -->
+
+
+    <div class="page-header text-center">
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+      <h1 id="timeline" style="color:#595e61">Our Team</h1><br>
+    </div>
+    <ul class="timeline">
       <li>
-        <div class="timeline-badge primary"><a><i class="glyphicon glyphicon-record invert" rel="tooltip"
-              title="11 hours ago via Twitter" id=""></i></a></div>
-        <div class="timeline-panel">
-          <div class="timeline-body">
-            <p><b>Rafamaciel</b></p>
-            <p>I only make it responsive and remove the empty spaces to be more like Facebook timeline!</p>
-          </div>
-          <div class="timeline-footer primary">
-            <a><i class="glyphicon glyphicon-thumbs-up"></i></a>
-            <a><i class="glyphicon glyphicon-share"></i></a>
-            <a class="pull-right">Kunal</a>
-            <p><b>Full Stack Developer</b></p>
-          </div>
-        </div>
-      </li>
-      <li class="timeline-inverted">
         <div class="timeline-badge primary"><a><i class="glyphicon glyphicon-record invert" rel="tooltip"
               title="11 hours ago via Twitter" id=""></i></a></div>
         <div class="timeline-panel">
@@ -179,15 +81,211 @@
             </div>
             <div class="col-lg-8">
               <div class="timeline-body">
-                <p>I have pursued Master's in Technology (Electronics and Communication). I have 12+ years of experience in teaching undergraduate engineering courses to my credit. I am well equipped with the knowledge of handling Mathematics, Physics and Robotics Courses at school, secondary and undergraduate levels and applying technology to teaching.</p>
+                <p>As a teacher specializing in English, social studies, and the arts, I help my students discover their
+                  voices. I am also passionate about technology and want to encourage others to think critically about
+                  how they use it. My hope is that I can help others find success in both their professional and
+                  personal lives through communication, education, and understanding.</p>
               </div>
             </div>
           </div>
           <div class="timeline-footer">
             <a><i class="glyphicon glyphicon-thumbs-up"></i></a>
             <a><i class="glyphicon glyphicon-share"></i></a>
-            <a class="pull-right">Sonia Jain</a>
-            <p><b>Robotics, Mathematics & Physics</b></p>
+            <a class="pull-right">ESL Instructor</a>
+            <p><b>Riley Jones</b></p>
+          </div>
+        </div>
+      </li>
+
+      <li class="timeline-inverted">
+        <div class="timeline-badge primary"><a><i class="glyphicon glyphicon-record" rel="tooltip"
+              title="11 hours ago via Twitter" id=""></i></a></div>
+        <div class="timeline-panel">
+          <div class="row">
+            <div class="col-4 my-auto">
+              <div class="timeline-heading" id="hidden">
+                <center><img class="img-responsive" src="http://localhost:1337/images/DavidCaldwell.png" /></center>
+              </div>
+            </div>
+            <div class="col-8">
+              <div class="timeline-body">
+                <p>I have over 5 years of experience teaching children, teenagers and adults. My expertise includes
+                  conversational fluency, resume/cover letter writing and test preparation. Above all else, I help my
+                  students grow more confident in their English abilities and help their academic and professional
+                  careers.</p>
+              </div>
+            </div>
+          </div>
+          <div class="timeline-footer">
+            <a><i class="glyphicon glyphicon-thumbs-up"></i></a>
+            <a><i class="glyphicon glyphicon-share"></i></a>
+            <a class="pull-right">ESL Instructor</a>
+            <p><b>David Caldwell</b></p>
+          </div>
+        </div>
+      </li>
+
+      <li class="timeline-inverted">
+        <div class="timeline-badge primary"><a><i class="glyphicon glyphicon-record" rel="tooltip"
+              title="11 hours ago via Twitter" id=""></i></a></div>
+        <div class="timeline-panel">
+          <div class="row">
+            <div class="col-8">
+              <div class="timeline-body">
+                <p>I have pursued Master's in Technology (Electronics and Communication). I have 12+ years of experience
+                  in teaching undergraduate engineering courses to my credit. I am well equipped with the knowledge of
+                  handling Mathematics, Physics and Robotics Courses at school, secondary and undergraduate levels and
+                  applying technology to teaching.</p>
+              </div>
+            </div>
+            <div class="col-4 my-auto">
+              <div class="timeline-heading" id="hidden">
+                <center><img class="img-responsive" src="http://localhost:1337/images/SoniaJain.png" />
+                </center>
+              </div>
+            </div>
+          </div>
+          <div class="timeline-footer">
+            <a><i class="glyphicon glyphicon-thumbs-up"></i></a>
+            <a><i class="glyphicon glyphicon-share"></i></a>
+            <a class="pull-right"><b>Sonia Jain</b></a>
+            <p>Robotics, Mathematics & Physics</p>
+          </div>
+        </div>
+      </li>
+
+      <li>
+        <div class="timeline-badge primary"><a><i class="glyphicon glyphicon-record" rel="tooltip"
+              title="11 hours ago via Twitter" id=""></i></a></div>
+        <div class="timeline-panel">
+          <div class="row">
+            <div class="col-8">
+              <div class="timeline-body">
+                <p>I have experience in teaching. I teach children how to build and program an ev3 robot. For me
+                  teaching is fun and interesting. And I am looking forward to teach more about ev3.</p>
+              </div>
+            </div>
+            <div class="col-4 my-auto">
+              <div class="timeline-heading" id="hidden">
+                <center><img class="img-responsive" src="http://localhost:1337/images/Mary-Anne Kulykova.png" />
+                </center>
+              </div>
+            </div>
+          </div>
+          <div class="timeline-footer">
+            <a><i class="glyphicon glyphicon-thumbs-up"></i></a>
+            <a><i class="glyphicon glyphicon-share"></i></a>
+            <a class="pull-right"><b>Mary-Anne Kulykova</b></a>
+            <p>EV3 Robot Programming</p>
+          </div>
+        </div>
+      </li>
+
+      <li class="timeline-inverted">
+        <div class="timeline-badge primary"><a><i class="glyphicon glyphicon-record" rel="tooltip"
+              title="11 hours ago via Twitter" id=""></i></a></div>
+        <div class="timeline-panel">
+          <div class="row">
+            <div class="col-4 my-auto">
+              <div class="timeline-heading" id="hidden">
+                <center><img class="img-responsive" src="http://localhost:1337/images/deepalakshmi-senthilkumar.jpg" />
+                </center>
+              </div>
+            </div>
+            <div class="col-8">
+              <div class="timeline-body">
+                <p>I am passionate about tutoring and love to teach new concepts to students and implementing those in
+                  practical. My areas of expertise are object-oriented programming languages such as C, C++, Java and
+                  advanced computer science subjects like Artificial Intelligence, Network Security and Robotics.</p>
+              </div>
+            </div>
+          </div>
+          <div class="timeline-footer">
+            <a><i class="glyphicon glyphicon-thumbs-up"></i></a>
+            <a><i class="glyphicon glyphicon-share"></i></a>
+            <a class="pull-right">C, C++, Java</a>
+            <p><b>Deepalakshmi Senthilkumar</b></p>
+          </div>
+        </div>
+      </li>
+
+      <li>
+        <div class="timeline-badge primary"><a><i class="glyphicon glyphicon-record invert" rel="tooltip"
+              title="11 hours ago via Twitter" id=""></i></a></div>
+        <div class="timeline-panel">
+          <div class="row">
+            <div class="col-4 my-auto">
+              <div class="timeline-heading" id="hidden">
+                <center><img class="img-responsive" src="http://localhost:1337/images/huiling-ma.jpeg" />
+                </center>
+              </div>
+            </div>
+            <div class="col-lg-8">
+              <div class="timeline-body">
+                <p>She got her Master's degree in English language and literature.She attended TESOL program in
+                  University of Queensland in Australia. With 18 years of College English, SAT, IELTS, TOEFL, GMAT, GRE
+                  teaching experience，she is rich in tutoring students to improve their scores in IELTS and other
+                  international tests.</p>
+              </div>
+            </div>
+          </div>
+          <div class="timeline-footer">
+            <a><i class="glyphicon glyphicon-thumbs-up"></i></a>
+            <a><i class="glyphicon glyphicon-share"></i></a>
+            <a class="pull-right">Language / IELTS</a>
+            <p><b>Huiling Ma (Maggie)</b></p>
+          </div>
+        </div>
+      </li>
+
+      <li class="timeline-inverted">
+        <div class="timeline-badge primary"><a><i class="glyphicon glyphicon-record" rel="tooltip"
+              title="11 hours ago via Twitter" id=""></i></a></div>
+        <div class="timeline-panel">
+          <div class="row">
+            <div class="col-8">
+              <div class="timeline-body">
+                <p>Lorem Ipsum lorem ipsum</p>
+              </div>
+            </div>
+            <div class="col-4 my-auto">
+              <div class="timeline-heading" id="hidden">
+                <center><img class="img-responsive" src="http://localhost:1337/images/kunal-kathpal.jpg" />
+                </center>
+              </div>
+            </div>
+          </div>
+          <div class="timeline-footer">
+            <a><i class="glyphicon glyphicon-thumbs-up"></i></a>
+            <a><i class="glyphicon glyphicon-share"></i></a>
+            <a class="pull-right"><b>Kunal Kathpal</b></a>
+            <p>Developer</p>
+          </div>
+        </div>
+      </li>
+
+      <li>
+        <div class="timeline-badge primary"><a><i class="glyphicon glyphicon-record" rel="tooltip"
+              title="11 hours ago via Twitter" id=""></i></a></div>
+        <div class="timeline-panel">
+          <div class="row">
+            <div class="col-8">
+              <div class="timeline-body">
+                <p>Lorem Ipsum lorem ipsum</p>
+              </div>
+            </div>
+            <div class="col-4 my-auto">
+              <div class="timeline-heading" id="hidden">
+                <center><img class="img-responsive" src="http://localhost:1337/images/jay-sharma.jpg" />
+                </center>
+              </div>
+            </div>
+          </div>
+          <div class="timeline-footer">
+            <a><i class="glyphicon glyphicon-thumbs-up"></i></a>
+            <a><i class="glyphicon glyphicon-share"></i></a>
+            <a class="pull-right"><b>Jay Sharma</b></a>
+            <p>Full Stack Developer</p>
           </div>
         </div>
       </li>
