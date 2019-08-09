@@ -1,17 +1,67 @@
 <html>
 
 <head>
+    <style>
+        #hidden {
+            overflow: hidden;
+        }
 
+        #bar {
+            position: absolute;
+            left: 0;
+            right: 0;
+            padding: 15px;
+            background-size: 100%;
+        }
+    </style>
 </head>
 
 <body>
-    ...
-    <div class="main">
-        <section>...</section>
-        <section>...</section>
-        ...
-    </div>
-    ...
+    <!-- start banner Area -->
+    <section class="banner-area" id="bar">
+        <div class="container">
+            <div class="row justify-content-start align-items-center">
+                <div class="col-lg col-md-12">
+                    <h1 class="text-white"><br><br>Test Payment for Lilly</h1>
+                    <p class="mx-auto text-white  mt-20 mb-40" align="justify">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End banner Area -->
 </body>
+<br><br><br><br><br><br><br><br><br><br><br><br>
+
+<div class="row">
+        <div class="col-lg-4 col-md-6 ">
+        </div>
+    <div class="col-lg-4 col-md-6 ">
+        <div class="single-feature mb-30">
+            <div class="title d-flex flex-row pb-20">
+                <span class="lnr lnr-phone"></span>
+                <h4><a href="#">Test Payment</a></h4>
+            </div>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam eligendi sint natus aut aliquid quasi
+                dolore obcaecati nam similique at rem minima ut magnam odit qui eaque quaerat, praesentium facilis.
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            </p>
+            <center><button type="button" class="btn btn-light" disabled>CA$ 1</button></center>
+            <br>
+            <center>
+                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                    <input type="hidden" name="cmd" value="_s-xclick">
+                    <input type="hidden" name="hosted_button_id" value="EBVL25TZWLXRC">
+                    <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0"
+                        name="submit" alt="PayPal - The safer, easier way to pay online!">
+                    <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1"
+                        height="1">
+                </form>
+            </center>
+        </div>
+    </div>
+</div>
 
 </html>
