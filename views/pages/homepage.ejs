@@ -16,7 +16,11 @@
   <meta charset="UTF-8">
   <!-- Site Title -->
   <title>NovaLeaf</title>
-
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <style>
+  .mySlides { max-width: 100%;
+  max-height:100%;}
+   </style>
   <!-- <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"> -->
   <!--
     CSS
@@ -35,7 +39,16 @@
     <div class="container">
       <div class="row justify-content-start align-items-center">
         <div class="col-lg-6 col-md-12 no-padding banner-right">
-          <img class="img-fluid" src="/images/header.png" alt="Cinque Terre">
+          <!-- sliding images-->
+          <div class="w3-content w3-section"  >
+              <img class="mySlides" src="/images/header.png"  alt="Cinque Terre">
+              <img class="mySlides" src="/images/l1.jpg"  alt="Cinque Terre">
+              <img class="mySlides" src="/images/l2.jpg"  alt="Cinque Terre">
+              <img class="mySlides" src="/images/comapny_logo.png" alt="Cinque Terre">
+            </div>
+        
+          <!-- end of sliding images-->
+        
         </div>
         <div class="col-lg-6 col-md-12 banner-left">
           <h1 class="text-white">
@@ -203,6 +216,24 @@
   <script src="assets/js/parallax.min.js"></script>
   <script src="assets/js/owl.carousel.min.js"></script>
   <script src="assets/js/jquery.sticky.js"></script>
+
+  
+<script>
+    var myIndex = 0;
+    carousel();
+    
+    function carousel() {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";  
+      }
+      myIndex++;
+      if (myIndex > x.length) {myIndex = 1}    
+      x[myIndex-1].style.display = "block";  
+      setTimeout(carousel, 2500); // Change image every 1.5 seconds
+    }
+    </script>
 
   <script src="js/main.js"></script>
 </body>
