@@ -49,6 +49,6 @@ module.exports.datastores = {
     *                                                                          *
     ***************************************************************************/
     adapter: 'sails-mysql',
-    url: 'mysql://nova@nova-leaf:Test1234@nova-leaf.mysql.database.azure.com:3306/novaleaf',
+    url: 'mysql://novaleafedu@novaleafedu:Yr475433@novaleafedu.mysql.database.azure.com:3306/nova-db',
   },
 };
