@@ -17,8 +17,8 @@ a [Sails v1](https://sailsjs.com) application. Hosted using Microsoft Azure's Ap
 This app was originally generated on Thu Jul 25 2019 12:46:41 GMT-0300 (Atlantic Daylight Time) using Sails v1.2.2.
 
 ### Docker Commands
-cd novaleaf
-docker build -t novaleafedu/devops .
-docker run -it --rm novaleafedu/devops
-docker login
-docker push novaleafedu/cheers2019
+1. cd novaleaf
+2. docker build -t novaleafedu/devops .
+3. docker run -it --rm novaleafedu/devops
+4. docker login
+5. docker push novaleafedu/cheers2019
