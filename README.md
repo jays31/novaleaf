@@ -22,3 +22,19 @@ This app was originally generated on Thu Jul 25 2019 12:46:41 GMT-0300 (Atlantic
 3. docker run -it --rm novaleafedu/devops
 4. docker login
 5. docker push novaleafedu/devops
+
+### Tasks to Complete
+- Login Page
+- Dashboard
+- Maintain a Session with Cookie
+- Add content to Adults Page
+- Add content to Camps page
+- Add content to Events page
+- Change homepage's images to make them full width
+- Connect the timetable with database
+- Add children to database
+- Add Child Sign-up page
+- Customer (Intended, Trial, Paid, Custom-Manual-Add)
+- Registration (C.Attendance, TimeTable, Marks)
+- Employee (Contract, Full-Time, Part-Time)
+- Feedback Evaluation
