@@ -1,0 +1,115 @@
+<!-- Author: Jay Sharma (B00824331) -->
+
+<!DOCTYPE html>
+<html lang=en>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <style>
+    h5 {
+      color: #0e6382;
+      padding-bottom: 5px;
+    }
+
+    h4 {
+      color: #0e6382;
+    }
+
+    h3 {
+      color: #0e6382;
+    }
+
+    h2 {
+      color: #0e6382;
+    }
+    div.input-group{
+        padding-bottom: 2px;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div class="container">
+  </div><br><br><br>
+
+  <br>
+
+  <form name="donorForm" id="donorForm" action="/register" method="post">
+    <div class="container">
+      <div>
+        <h2 class="mr-auto" style="text-align: center;">Register your Child</h2>
+
+      </div>
+      <hr>
+      <div class="row">
+
+        <div class="col-sm">
+
+            <!-- Age, Child's Name, Grade, DoB, Gender, School, Home Address, Parents Name, Medical Cond, Emer Contacts, Relationship to Child, How did you find about us?, Accept Terms $$ T&Cs -->
+
+          <h5>&ensp;Child's Name</h5>
+          <div class="input-group">
+            <input type="text" name="cname" id="cname" placeholder="Child's name" class="form-control"
+              required>
+            <div class="input-group-append">
+            </div>
+          </div><br>
+
+          <h5>&ensp;Your Email</h5>
+          <div class="input-group">
+            <input type="email" name="orgemail" id="orgemail" placeholder="Your Email" class="form-control"
+              required>
+            <div class="input-group-append">
+            </div>
+          </div><br>
+
+          <h5>&ensp;Your Address</h5>
+          <div class="input-group">
+            <input type="text" name="address" id="address" placeholder="Address" class="form-control" required>
+            <div class="input-group-append">
+            </div>
+          </div>
+
+        </div>
+
+        <div class="col-sm">
+
+          <h5>&ensp;Emergency Contact Number 1</h5>
+          <div class="input-group">
+            <input type="number" name="org_password_signup" id="org_password_signup" placeholder="Enter a 10 digit number"
+              class="form-control" required>
+            <div class="input-group-append">
+            </div>
+          </div><br>
+
+          <h5>&ensp;Emergency Contact Number 2</h5>
+          <div class="input-group">
+            <input type="number" name="confirmPassword" id="confirmPassword" placeholder="Enter a 10 digit number"
+              class="form-control" required>
+            <div class="input-group-append">
+            </div>
+          </div><br>
+
+          <h5>&ensp;Child's Blood Group</h5>
+          <div class="input-group">
+            <input type="text" name="phone_number" id="phone_number" placeholder="AB+"
+              class="form-control" required>
+            <div class="input-group-append">
+            </div>
+          </div>
+          <br>
+        </div>
+      </div>
+      <center><button id="btnSignup" class="mr-auto btn btn-info my-2 my-lg-3" type="button">Submit</button>
+      </center>
+    </div>
+    <br><br>
+  </form>
+
+</body>
+
+</html>

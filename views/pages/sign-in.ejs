@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Warrior Mortgage</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+  <style type="text/css">
+
+    body,
+    html {
+      height: 100%;
+    }
+
+    .bg {
+      background-image: url("https://i0.wp.com/lilar.com/wp-content/uploads/2016/10/Savin-NY-Website-Background-Web.jpg?ssl=1");
+      height: 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    #footer {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin-bottom: 0px;
+}
+
+    .col-sm-6 {
+      float: none;
+      margin: 0 auto;
+    }
+
+    .modal-lg {
+      max-width: 50% !important;
+    }
+
+    .modal-body {
+      max-height: calc(100vh - 200px);
+      overflow-y: auto;
+    }
+  </style>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $("#novaLogin").click(function () {
+        var username = $("#user_id").val();
+        var password = $("#user_pass").val();
+        $.ajax({
+          url: '/novalogin/find',
+          method: 'GET',
+          data: {
+            userName: username,
+            password: password,
+          },
+          dataType: 'json',
+          success: function (response) {
+            if (null != response && response.length > 0) {
+              window.location = "/";
+            } else {
+              alert('Invalid Login');
+            }
+          },
+          error: function (err) {
+            console.log("Please check your input");
+            alert('Please check your input...');
+          }
+        });
+      });
+    });
+  </script>
+
+</head>
+
+<body>
+<br><br><br>
+  <br><br>
+  <div class="bg">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-sm-6">
+          <form id="dataform" onkeydown="return event.key != 'Enter';">
+            <div class="card text-center">
+              <div class="card-header">Login</div>
+              <div class="card-body">
+
+                <div class="input-group">
+                  <input type="text" name="user_id" id="user_id" placeholder="User Name" class="form-control"
+                    required />&ensp;&ensp;
+                </div><br>
+
+                <div class="input-group">
+                  <input type="password" name="user_pass" id="user_pass" placeholder="Password" class="form-control"
+                    required />&ensp;&ensp;
+                </div><br>
+
+              </div>
+              <div class="card-footer text-muted">
+                <button class="btn btn-success" id="novaLogin" type="button">Submit</button>
+              </div>
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+    <br><br><br><br><br><br><br><br><br>
+
+</body>
+
+</html>

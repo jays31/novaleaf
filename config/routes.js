@@ -27,7 +27,9 @@ module.exports.routes = {
   '/camps': { view: 'pages/camps' },
   '/events': { view: 'pages/events' },
   '/contact-us': { view: 'pages/contact-us' },
-
+  '/register': { view: 'pages/register' },
+  '/sign-in': { view: 'pages/sign-in' },
+  '/time-table': { view: 'pages/time-table' },
 
   /***************************************************************************
   *                                                                          *
