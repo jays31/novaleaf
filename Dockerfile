@@ -1,7 +1,7 @@
 FROM node:10.16.0
 RUN npm install sails -g
 ENV NODE_ENV development
-WORKDIR /Users/Jay/Sails/NovaLeaf
+WORKDIR D:/novaleaf/novaleaf/
 COPY ["package.json", "package-lock.json*", "npm-shrinkwrap.json*", "./"]
 RUN npm install
 COPY . .
