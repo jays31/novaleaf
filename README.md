@@ -18,9 +18,9 @@ This app was originally generated on Thu Jul 25 2019 12:46:41 GMT-0300 (Atlantic
 
 ### Docker Commands
 1. cd novaleaf
-2. docker build -t novaleafedu/devops .
-3. docker run -it --rm novaleafedu/devops
-4. docker login
+2. docker login
+3. docker build -t novaleafedu/devops .
+4. docker run -it --rm -p 1337:1337 novaleafedu/devops
 5. docker push novaleafedu/devops
 
 ### Tasks to Complete
