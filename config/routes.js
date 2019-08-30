@@ -30,6 +30,7 @@ module.exports.routes = {
   '/register': { view: 'pages/register' },
   '/sign-in': { view: 'pages/sign-in' },
   '/time-table': { view: 'pages/time-table' },
+  '/dashboard': { view: 'pages/dashboard' },
 
   /***************************************************************************
   *                                                                          *
