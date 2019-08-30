@@ -2,11 +2,6 @@
 
 <head>
     <style>
-        .camp_slides {
-            max-width: 150%;
-            max-height: 150%;
-        }
-
         #hidden {
             overflow: hidden;
         }
@@ -18,46 +13,70 @@
             padding: 15px;
             background-size: 100%;
         }
+
+        .campSlides {
+            max-width: 100%;
+            border-radius: 0%;
+        }
+
+        h3 {
+            color: white;
+        }
     </style>
+    <script>
+        var myIndex = 0;
+        carousel();
+
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("campSlides");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            myIndex++;
+            if (myIndex > x.length) { myIndex = 1 }
+            x[myIndex - 1].style.display = "block";
+            setTimeout(carousel, 2500); // Change image every 1.5 seconds
+        }
+    </script>
 </head>
 
 <body>
     <!-- start banner Area -->
-    <section class="banner-area" id="bar">
+    <section class="banner-area" id="home">
         <div class="container">
             <div class="row justify-content-start align-items-center">
-                <div class="col-lg col-md-12">
-                    <h1 class="text-white"><br><br>Camps</h1>
-                    <p class="mx-auto text-white  mt-20 mb-40" align="justify">
-                        Our Camps run during the Summer and March breaks and we also provide PD Camp too.
-                        The Camps judiciously divide the entire days activities that find their scope from doing Lego
-                        Activities, Art Lessons, STEM Lessons along with some free/fun times for kids.
-                    </p>
+                <div class="col-lg-8 col-md-4">
+                    <!-- sliding images-->
+
+                    <div class="w3-content">
+                        <!-- <img class="mySlides" src="/images/header.png" alt="Cinque Terre"> -->
+                        <img class="campSlides" src="/images/homeslider2.jpeg" alt="Cinque Terre">
+                        <img class="campSlides" src="/images/homeslider3.jpeg" alt="Cinque Terre">
+                        <img class="campSlides" src="/images/homeslider4.jpeg" alt="Cinque Terre">
+                        <img class="campSlides" src="/images/homeslider5.jpeg" alt="Cinque Terre">
+                        <img class="campSlides" src="/images/homeslider6.jpeg" alt="Cinque Terre">
+                    </div>
+                    <!-- end of sliding images-->
+
+                </div>
+
+                <div class="col-lg-4 " style="border-radius:10%; text-align: center; ">
+                    <h2 class="text-white">
+                        <span>NovaLeaf</span><br></h2>
+                    <h3>Training Institute</h3>
+                    <p class="my-auto text-white  mt-20 mb-40"><br>
+                        A Leader in K-12 STREAM Canadian education. It aims at making students think through the lens
+                        of logic and hence preparing them for
+                        Technological breakthrough in future.
+                    </p><br><br>
+                    <a href="/contact-us" class="text-uppercase header-btn">Contact Us</span></a>
                 </div>
             </div>
         </div>
     </section>
-
-
-    <section class="service-area" id="service">
-            <div class="row">
-                    <div class="row justify-content-start align-items-center">
-                        <div class="col-lg-6 col-md-12 no-padding banner-right">
-                            <!-- sliding images-->
-                
-                            <div class="w3-content">
-                                <img class="camp_slides" src="/images/summercamp1.jpeg" alt="Cinque Terre">
-                                <img class="camp_slides" src="/images/camp_weekend.jpeg" alt="Cinque Terre">
-                                <img class="camp_slides" src="/images/summercamp.jpeg" alt="Cinque Terre">
-                            </div>
-                            <!-- end of sliding images-->
-                
-                        </div>
-                    </div>
-                </div>
-    </section>
     <!-- End banner Area -->
-</body>
+
 <br><br><br><br><br><br><br><br><br><br><br><br>
 
 <div class="row">
@@ -74,37 +93,6 @@
         </div>
     </div>
 </div>
-
-
-<script src="assets/js/vendor/jquery-2.2.4.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"
-    integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
-    crossorigin="anonymous"></script>
-<script src="assets/js/vendor/bootstrap.min.js"></script>
-<script src="assets/js/jquery.ajaxchimp.min.js"></script>
-<script src="assets/js/jquery.magnific-popup.min.js"></script>
-<script src="assets/js/parallax.min.js"></script>
-<script src="assets/js/owl.carousel.min.js"></script>
-<script src="assets/js/jquery.sticky.js"></script>
-
-
-<script>
-    var myIndex = 0;
-    carousel();
-
-    function carousel() {
-        var i;
-        var x = document.getElementsByClassName("camp_slides");
-        for (i = 0; i < x.length; i++) {
-            x[i].style.display = "none";
-        }
-        myIndex++;
-        if (myIndex > x.length) { myIndex = 1 }
-        x[myIndex - 1].style.display = "block";
-        setTimeout(carousel, 2500); // Change image every 1.5 seconds
-    }
-</script>
-
 <script src="js/main.js"></script>
-
+</body>
 </html>

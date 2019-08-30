@@ -31,6 +31,12 @@ module.exports.routes = {
   '/sign-in': { view: 'pages/sign-in' },
   '/time-table': { view: 'pages/time-table' },
   '/dashboard': { view: 'pages/dashboard' },
+  '/dashboard/customer': { view: 'pages/customer' },
+  '/dashboard/customer/intended': { view: 'pages/intended' },
+  '/dashboard/customer/paid': { view: 'pages/paid' },
+  '/dashboard/customer/offline': { view: 'pages/offline' },
+  '/dashboard/registration': { view: 'pages/registration' },
+  '/dashboard/employee': { view: 'pages/employee' },
 
   /***************************************************************************
   *                                                                          *
