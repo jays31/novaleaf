@@ -1,98 +1,45 @@
-<html>
+<!DOCTYPE html>
+<html lang="zxx" class="no-js">
 
 <head>
-    <style>
-        #hidden {
-            overflow: hidden;
-        }
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="shortcut icon" href="/images/fav.png">
+  <meta name="author" content="colorlib">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta charset="UTF-8">
+  <title>NovaLeaf</title>
+  <style>
+    .mySlides {
+      max-width: 100%;
+      border-radius: 0%;
+    }
 
-        #bar {
-            position: absolute;
-            left: 0;
-            right: 0;
-            padding: 15px;
-            background-size: 100%;
-        }
-
-        .campSlides {
-            max-width: 100%;
-            border-radius: 0%;
-        }
-
-        h3 {
-            color: white;
-        }
-    </style>
-    <script>
-        var myIndex = 0;
-        carousel();
-
-        function carousel() {
-            var i;
-            var x = document.getElementsByClassName("campSlides");
-            for (i = 0; i < x.length; i++) {
-                x[i].style.display = "none";
-            }
-            myIndex++;
-            if (myIndex > x.length) { myIndex = 1 }
-            x[myIndex - 1].style.display = "block";
-            setTimeout(carousel, 2500); // Change image every 1.5 seconds
-        }
-    </script>
+    h6 {
+      color: #00897b;
+    }
+  </style>
 </head>
 
 <body>
-    <!-- start banner Area -->
-    <section class="banner-area" id="home">
-        <div class="container">
-            <div class="row justify-content-start align-items-center">
-                <div class="col-lg-8 col-md-4">
-                    <!-- sliding images-->
-
-                    <div class="w3-content">
-                        <!-- <img class="mySlides" src="/images/header.png" alt="Cinque Terre"> -->
-                        <img class="campSlides" src="/images/homeslider2.jpeg" alt="Cinque Terre">
-                        <img class="campSlides" src="/images/homeslider3.jpeg" alt="Cinque Terre">
-                        <img class="campSlides" src="/images/homeslider4.jpeg" alt="Cinque Terre">
-                        <img class="campSlides" src="/images/homeslider5.jpeg" alt="Cinque Terre">
-                        <img class="campSlides" src="/images/homeslider6.jpeg" alt="Cinque Terre">
-                    </div>
-                    <!-- end of sliding images-->
-
-                </div>
-
-                <div class="col-lg-4 " style="border-radius:10%; text-align: center; ">
-                    <h2 class="text-white">
-                        <span>NovaLeaf</span><br></h2>
-                    <h3>Training Institute</h3>
-                    <p class="my-auto text-white  mt-20 mb-40"><br>
-                        A Leader in K-12 STREAM Canadian education. It aims at making students think through the lens
-                        of logic and hence preparing them for
-                        Technological breakthrough in future.
-                    </p><br><br>
-                    <a href="/contact-us" class="text-uppercase header-btn">Contact Us</span></a>
-                </div>
-            </div>
+  <!-- start banner Area -->
+  <section class="banner-area" id="bar">
+    <div class="container">
+      <div class="row justify-content-start align-items-center">
+        <div class="col-lg col-md-12">
+          <h1 class="text-white">
+            <br><br>Camps
+          </h1>
+          <p class="mx-auto text-white  mt-20 mb-40" align="justify">
+            Accelerated workshops for your kids
+          </p>
         </div>
-    </section>
-    <!-- End banner Area -->
-
-<br><br><br><br><br><br><br><br><br><br><br><br>
-
-<div class="row">
-    <div class="col-lg-4 col-md-6 ">
+      </div>
     </div>
-    <div class="col-lg-4 col-md-6 ">
-        <div class="single-feature mb-30">
-            <div class="title d-flex flex-row pb-20">
-                <span class="lnr lnr-phone"></span>
-                <h4>
+  </section>
+  <!-- End banner Area -->
 
-                </h4>
-            </div>
-        </div>
-    </div>
-</div>
-<script src="js/main.js"></script>
+  <br><br><br>
+
 </body>
 </html>
