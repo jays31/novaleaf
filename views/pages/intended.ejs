@@ -13,11 +13,19 @@
         body {
             font-family: Arial, Helvetica, sans-serif;
         }
+
         html,
         body {
             height: 100%;
             margin: 0;
             padding: 0;
+        }
+        table.table {
+            table-layout: auto;
+        }
+        h3{
+            padding-top: 10px;
+            color: #00897b;
         }
     </style>
 
@@ -30,26 +38,48 @@
             <div class="table-wrapper ">
                 <div class="table-title">
                     <div class="row">
-                        <div class="col-sm-8">
-                            <h4><b>Intended Customers</b></h4>
-                        </div>
-                        <div class="col-sm-4">
-                            <button type="button" class="btn btn-info add-new"><i class="fa fa-plus"></i> Add
-                                New</button>
+                        <div class="col">
+                            <center>
+                                <h3><b>Intended Customers</b></h3>
+                            </center>
                         </div>
                     </div>
                 </div><br><br>
-                <table class="table table-bordered" id="mtable">
+                <table class="table" id="mtable">
                     <thead>
                         <tr>
                             <th>Name</th>
                             <th>Email ID</th>
                             <th>Phone Number</th>
                             <th>Message</th>
-                            <th>Actions</th>
                         </tr>
                     </thead>
                     <tbody>
+                        <script>
+                            var geturl = "http://localhost:1337/contactus"
+
+                            var xmlHttp = new XMLHttpRequest();
+                            xmlHttp.open("GET", geturl, false);
+                            xmlHttp.send(null);
+
+                            var tdata = xmlHttp.responseText;
+                            var obj = JSON.parse(tdata)
+                            for (var i = 0, len = obj.length; i < len; ++i) {
+                                var id = obj[i]["id"]
+                                var fullName = obj[i]["fullName"]
+                                var emailID = obj[i]["emailID"]
+                                var phoneNo = obj[i]["phoneNo"]
+                                var message = obj[i]["message"]
+                                // $('<tr>').append("<td>" + item.fullName + "</td><td>" + item.emailID + "</td>" + Actions).appendTo('#mtable');
+                                console.log(emailID)
+                                document.write('<tr>');
+                                document.write('<th>' + fullName + '</th>');
+                                document.write('<th>' + emailID + '</th>');
+                                document.write('<th>' + phoneNo + '</th>');
+                                document.write('<th>' + message + '</th>');
+                                document.write('</tr>');
+                            }
+                        </script>
 
                     </tbody>
                 </table>
