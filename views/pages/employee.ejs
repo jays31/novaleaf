@@ -1,0 +1,214 @@
+<html>
+
+<head>
+    <style>
+        #hidden {
+            overflow: hidden;
+        }
+
+        #bar {
+            position: absolute;
+            left: 0;
+            right: 0;
+            padding: 15px;
+            background-size: 100%;
+        }
+
+        table.table {
+            table-layout: auto;
+            width: 100%;
+        }
+
+        h3 {
+            padding-top: 10px;
+            color: #00897b;
+        }
+        h5{
+            padding-bottom: 10px;
+            color: #00897b; 
+        }
+    </style>
+    <script>
+        function empstore() {
+            var empName = document.getElementById("empName").value;
+            var empJoinDate = document.getElementById("empJoinDate").value;
+            var empAddress = document.getElementById("empAddress").value;
+            var empPhone = document.getElementById("empPhone").value;
+            var empHourRate = document.getElementById("empHourRate").value;
+            var empType = document.getElementById("empType").value;
+            var empRole = document.getElementById("empRole").value;
+            var addurl = "/employeestore/create?empName=" + empName + "&empJoinDate=" + empJoinDate + "&empAddress=" + empAddress + "&empPhone=" + empPhone + "&empHourRate=" + empHourRate + "&empType=" + empType + "&empRole=" + empRole;
+            var xmlHttp = new XMLHttpRequest();
+            xmlHttp.open("GET", addurl, false); // false for synchronous request
+            xmlHttp.send(null);
+        }
+    </script>
+</head>
+
+<body>
+    <!-- start banner Area -->
+    <section class="banner-area" id="bar">
+        <div class="container">
+            <div class="row justify-content-start align-items-center">
+                <div class="col-lg col-md-12">
+                    <h1 class="text-white">
+                        <br><br>Employee Management
+                    </h1>
+                    <p class="mx-auto text-white  mt-20 mb-40" align="justify">
+                        Manage Full-time employees, Part-time employees and On-contract employees through this portal
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <br><br><br><br><br><br>
+
+    <div class="container">
+        <br><br><br><br>
+        <div class="container">
+            <div class="table-wrapper">
+                <div class="table-title">
+                    <div class="row">
+                        <div class="col">
+                            <center>
+                                <h3><b>Directory</b></h3>
+                            </center>
+                        </div>
+                    </div>
+                </div><br>
+                <table class="table" id="mtable">
+                    <thead>
+                        <tr>
+                            <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                            <th>&nbsp;Joining&nbsp;</th>
+                            <th>Phone</th>
+                            <th>Address</th>
+                            <th>&nbsp;&nbsp;&nbsp;&nbsp;Type&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                            <th>Wage</th>
+                            <th>Role</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <script>
+                            var geturl = "http://localhost:1337/employeestore"
+                            var xmlHttp = new XMLHttpRequest();
+                            xmlHttp.open("GET", geturl, false);
+                            xmlHttp.send(null);
+
+                            var tdata = xmlHttp.responseText;
+                            var obj = JSON.parse(tdata)
+                            for (var i = 0, len = obj.length; i < len; ++i) {
+                                var id = obj[i]["id"]
+                                var empName = obj[i]["empName"]
+                                var empJoinDate = obj[i]["empJoinDate"]
+                                var empPhone = obj[i]["empPhone"]
+                                var empAddress = obj[i]["empAddress"]
+                                var empType = obj[i]["empType"]
+                                var empHourRate = obj[i]["empHourRate"]
+                                var empRole = obj[i]["empRole"]
+                                document.write('<tr>');
+                                document.write('<th>' + empName + '</th>');
+                                document.write('<th>' + empJoinDate + '</th>');
+                                document.write('<th>' + empPhone + '</th>');
+                                document.write('<th>' + empAddress + '</th>');
+                                document.write('<th>' + empType + '</th>');
+                                document.write('<th>' + empHourRate + '</th>');
+                                document.write('<th>' + empRole + '</th>');
+                                document.write('</tr>');
+                            }
+                        </script>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <center>
+                        <h3><b>Add an Employee</b></h3>
+                    </center>
+                </div>
+
+            </div>
+            <form name="donorForm" id="donorForm" action="/dashboard/employee" method="post">
+                <div class="container">
+                    <hr>
+                    <div class="row">
+                        <div class="col-sm">
+                            <h5>&ensp;Employee Name</h5>
+                            <div class="input-group">
+                                <input type="text" name="empName" id="empName" placeholder="Employee's Full Name"
+                                    class="form-control" required>
+                                <div class="input-group-append">
+                                </div>
+                            </div><br>
+
+                            <h5>&ensp;Employee Joining Date</h5>
+                            <div class="input-group">
+                                <input type="text" name="empJoinDate" id="empJoinDate" placeholder="MM-YYYY"
+                                    class="form-control" required>
+                                <div class="input-group-append">
+                                </div>
+                            </div><br>
+
+                            <h5>&ensp;Employee's Address</h5>
+                            <div class="input-group">
+                                <input type="text" name="empAddress" id="empAddress" placeholder="Full Address"
+                                    class="form-control" required>
+                                <div class="input-group-append">
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="col-sm">
+
+                            <h5>&ensp;Employee's Phone Number</h5>
+                            <div class="input-group">
+                                <input type="number" name="empPhone" id="empPhone"
+                                    placeholder="10 digit number" class="form-control" required>
+                                <div class="input-group-append">
+                                </div>
+                            </div><br>
+
+                            <h5>&ensp;Employee's Wage/hour</h5>
+                            <div class="input-group">
+                                <input type="number" name="empHourRate" id="empHourRate"
+                                    placeholder="$XX/hr" class="form-control" required>
+                                <div class="input-group-append">
+                                </div>
+                            </div><br>
+
+                            <h5>&ensp;Employee's Role</h5>
+                            <div class="input-group">
+                                <input type="text" name="empRole" id="empRole" placeholder="Developer/Teacher"
+                                    class="form-control" required>
+                                <div class="input-group-append">
+                                </div>
+                            </div>
+                            <br>
+                        </div>
+                    </div>
+                    <h5>&ensp;Employee Type</h5>
+                            <div class="input-group">
+                                <input type="text" name="empType" id="empType"
+                                    placeholder="Part-time/Full-time/Contract" class="form-control" required>
+                                <div class="input-group-append">
+                                </div>
+                            </div>
+                    <center><button class="primary-btn mt-20" onclick="empstore()">Add Employee<span class="lnr lnr-phone"></span></button>
+                    </center>
+                </div>
+                <br><br>
+            </form>
+        </div>
+
+    </div>
+    <br><br>
+
+
+</body>
+
+</html>
