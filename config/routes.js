@@ -35,7 +35,6 @@ module.exports.routes = {
   '/dashboard/customer/intended': { view: 'pages/intended' },
   '/dashboard/customer/paid': { view: 'pages/paid' },
   '/dashboard/customer/offline': { view: 'pages/offline' },
-  '/dashboard/registration': { view: 'pages/registration' },
   '/dashboard/employee': { view: 'pages/employee' },
 
   /***************************************************************************

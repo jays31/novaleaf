@@ -13,6 +13,16 @@
             padding: 15px;
             background-size: 100%;
         }
+
+        table.table {
+            table-layout: auto;
+            width: 100%;
+        }
+
+        h3 {
+            padding-top: 10px;
+            color: #00897b;
+        }
     </style>
 </head>
 
@@ -23,7 +33,7 @@
             <div class="row justify-content-start align-items-center">
                 <div class="col-lg col-md-12">
                     <h1 class="text-white">
-                        <br><br>Teacher Time Tables
+                        <br><br>Course Time Table
                     </h1>
                     <p class="mx-auto text-white  mt-20 mb-40" align="justify">
                         View time tables of all teachers currently enrolled at Novaleaf Edu
@@ -32,10 +42,74 @@
             </div>
         </div>
     </section>
-    <!-- End banner Area -->
-    <br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br>
 
+    <div class="container">
+        <br><br><br><br>
+        <div class="container">
+            <div class="table-wrapper">
+                <div class="table-title">
+                    <div class="row">
+                        <div class="col">
+                            <center>
+                                <h3><b>September 2019</b></h3>
+                            </center>
+                        </div>
+                    </div>
+                </div><br>
+                <table class="table" id="mtable">
+                    <thead>
+                        <tr>
+                            <th>Monday</th>
+                            <th>Tuesday</th>
+                            <th>Wednesday</th>
+                            <th>Thursday</th>
+                            <th>Friday</th>
+                            <th>Saturday</th>
+                            <th>Sunday</th>
+                            <th>Time</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <script>
+                            var geturl = "http://localhost:1337/timetable"
+                            var xmlHttp = new XMLHttpRequest();
+                            xmlHttp.open("GET", geturl, false);
+                            xmlHttp.send(null);
+
+                            var tdata = xmlHttp.responseText;
+                            var obj = JSON.parse(tdata)
+                            for (var i = 0, len = obj.length; i < len; ++i) {
+                                var id = obj[i]["id"]
+                                var time = obj[i]["Time"]
+                                var monday = obj[i]["Monday"]
+                                var tuesday = obj[i]["Tuesday"]
+                                var wednesday = obj[i]["Wednesday"]
+                                var thursday = obj[i]["Thursday"]
+                                var friday = obj[i]["Friday"]
+                                var saturday = obj[i]["Saturday"]
+                                var sunday = obj[i]["Sunday"]
+                                // $('<tr>').append("<td>" + item.fullName + "</td><td>" + item.emailID + "</td>" + Actions).appendTo('#mtable');
+                                document.write('<tr>');
+                                document.write('<th>' + time + '</th>');
+                                document.write('<th>' + monday + '</th>');
+                                document.write('<th>' + tuesday + '</th>');
+                                document.write('<th>' + wednesday + '</th>');
+                                document.write('<th>' + thursday + '</th>');
+                                document.write('<th>' + friday + '</th>');
+                                document.write('<th>' + saturday + '</th>');
+                                document.write('<th>' + sunday + '</th>');
+                                document.write('</tr>');
+                            }
+                        </script>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+    <br><br>
 
 
 </body>

@@ -16,7 +16,7 @@ a [Sails v1](https://sailsjs.com) application. Hosted using Microsoft Azure's Ap
 
 This app was originally generated on Thu Jul 25 2019 12:46:41 GMT-0300 (Atlantic Daylight Time) using Sails v1.2.2.
 
-### Docker Commands
+### Deploy via Docker
 1. cd novaleaf
 2. docker login
 3. docker build -t novaleafedu/devops .
@@ -24,17 +24,12 @@ This app was originally generated on Thu Jul 25 2019 12:46:41 GMT-0300 (Atlantic
 5. docker push novaleafedu/devops
 
 ### Tasks to Complete
-- Login Page
-- Dashboard
-- Maintain a Session with Cookie
-- Add content to Adults Page
-- Add content to Camps page
-- Add content to Events page
-- Change homepage's images to make them full width
-- Connect the timetable with database
-- Add children to database
-- Add Child Sign-up page
-- Customer (Intended, Trial, Paid, Custom-Manual-Add)
-- Registration (C.Attendance, TimeTable, Marks)
-- Employee (Contract, Full-Time, Part-Time)
-- Feedback Evaluation
+- bold page header
+- connect 
+- add registration form after buttons
+- connect the timetable with database
+- add children to database
+- customer (Intended, Trial, Paid, Custom-Manual-Add)
+- registration (C.Attendance, TimeTable, Marks)
+- employee (Contract, Full-Time, Part-Time)
+- feedback Evaluation
