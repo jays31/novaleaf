@@ -24,6 +24,7 @@ module.exports.routes = {
   '/about': { view: 'pages/about' },
   '/adults': { view: 'pages/adults' },
   '/kids': { view: 'pages/kids' },
+  '/birthday': { view: 'pages/birthday' },
   '/camps': { view: 'pages/camps' },
   '/events': { view: 'pages/events' },
   '/contact-us': { view: 'pages/contact-us' },
