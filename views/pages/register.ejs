@@ -1,114 +1,341 @@
-<!-- Author: Jay Sharma (B00824331) -->
-
-<!DOCTYPE html>
-<html lang=en>
+<html>
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
   <style>
-    h5 {
-      color: #0e6382;
-      padding-bottom: 5px;
+    #hidden {
+      overflow: hidden;
     }
 
-    h4 {
-      color: #0e6382;
+    #bar {
+      position: absolute;
+      left: 0;
+      right: 0;
+      padding: 15px;
+      background-size: 100%;
+    }
+
+    table.table {
+      table-layout: auto;
+      width: 100%;
     }
 
     h3 {
-      color: #0e6382;
+      padding-top: 10px;
+      color: #00897b;
     }
 
-    h2 {
-      color: #0e6382;
-    }
-    div.input-group{
-        padding-bottom: 2px;
+    h5,
+    h6 {
+      padding-bottom: 10px;
+      color: #00897b;
     }
   </style>
+  <script>
+    function kidstore() {
+      var program = document.getElementById("program").value;
+      var programStart = document.getElementById("programStart").value;
+      var programEnd = document.getElementById("programEnd").value;
+      var childName = document.getElementById("childName").value;
+      var childAge = document.getElementById("childAge").value;
+      var childGrade = document.getElementById("childGrade").value;
+      var childDOB = document.getElementById("childDOB").value;
+      var childGender = document.getElementById("childGender").value;
+      var school = document.getElementById("school").value;
+      var homeAddress = document.getElementById("homeAddress").value;
+      var parentName = document.getElementById("parentName").value;
+      var phone = document.getElementById("phone").value;
+      var email = document.getElementById("email").value;
+      var medicalCond = document.getElementById("medicalCond").value;
+      var emergName = document.getElementById("emergName").value;
+      var emergPhone = document.getElementById("emergPhone").value;
+      var initials = document.getElementById("initials").value;
+      var relationship = document.getElementById("relationship").value;
+      var date = document.getElementById("date").value;
+      var socialMedia = document.getElementById("socialMedia").value;
+      var iPad = document.getElementById("iPad").value;
+      var fullName = document.getElementById("fullName").value;
+      var initials2 = document.getElementById("initials2").value;
+      var date2 = document.getElementById("date2").value;
 
+      var addurl = "/registerstudent/create?program=" + program + "&programStart=" + programStart + "&programEnd=" + programEnd + "&childName=" + childName + "&childAge=" + childAge + "&childGrade=" + childGrade + "&childDOB=" + childDOB + "&childGender=" + childGender + "&school=" + school + "&homeAddress=" + homeAddress + "&parentName=" + parentName + "&phone=" + phone + "&email=" + email + "&medicalCond=" + medicalCond + "&emergName=" + emergName + "&emergPhone=" + emergPhone + "&initials=" + initials + "&relationship=" + relationship + "&date=" + date + "&socialMedia=" + socialMedia + "&iPad=" + iPad + "&fullName=" + fullName + "&initials2=" + initials2 + "&date2=" + date2;
+      var xmlHttp = new XMLHttpRequest();
+      xmlHttp.open("GET", addurl, false); // false for synchronous request
+      xmlHttp.send(null);
+    }
+  </script>
 </head>
 
 <body>
+  <!-- start banner Area -->
+  <section class="banner-area" id="bar">
+    <div class="container">
+      <div class="row justify-content-start align-items-center">
+        <div class="col-lg col-md-12">
+          <h1 class="text-white">
+            <br><br>New Registration
+          </h1>
+          <p class="mx-auto text-white  mt-20 mb-40" align="justify">
+            Add your child's details to register with NovaLeaf
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <br><br><br><br><br><br>
 
   <div class="container">
-  </div><br><br><br>
+    <br><br><br><br><br><br>
 
-  <br>
-
-  <form name="donorForm" id="donorForm" action="/register" method="post">
     <div class="container">
-      <div>
-        <h2 class="mr-auto" style="text-align: center;">Register your Child</h2>
+      <div class="row">
+        <div class="col">
+          <center>
+            <h3><b>Annexure I</b></h3>
+          </center>
+        </div>
 
       </div>
-      <hr>
-      <div class="row">
+      <form name="registerForm" id="registerForm" action="#" method="post">
+        <div class="container">
+          <hr><br>
+          <div class="row">
+            <div class="col-sm-4">
 
-        <div class="col-sm">
+              <h5>&ensp;Program</h5>
+              <div class="input-group">
+                <input type="text" name="program" id="program" placeholder="Program Name" class="form-control" required>
+              </div><br>
 
-            <!-- Child's name, email Age, Grade, DoB, Gender, School, Home Address, Parents Name, Medical Cond, Emer Contacts, Relationship to Child, How did you find about us?, Accept Terms $$ T&Cs -->
+              <h5>&ensp;Child's Name</h5>
+              <div class="input-group">
+                <input type="text" name="childName" id="childName" placeholder="Full Name" class="form-control"
+                  required>
+              </div><br>
 
-          <h5>&ensp;Child's Name</h5>
-          <div class="input-group">
-            <input type="text" name="cname" id="cname" placeholder="Child's name" class="form-control"
-              required>
-            <div class="input-group-append">
+              <h5>&ensp;Date of Birth</h5>
+              <div class="input-group">
+                <input type="text" name="childDOB" id="childDOB" placeholder="MM-DD-YYYY" class="form-control" required>
+              </div><br>
+
             </div>
-          </div><br>
 
-          <h5>&ensp;Your Email</h5>
-          <div class="input-group">
-            <input type="email" name="yemail" id="orgemail" placeholder="Your Email" class="form-control"
-              required>
-            <div class="input-group-append">
+            <div class="col-sm-4">
+
+              <h5>&ensp;Program Start Date</h5>
+              <div class="input-group">
+                <input type="text" name="programStart" id="programStart" placeholder="MM-YYYY" class="form-control"
+                  required>
+              </div><br>
+
+              <h5>&ensp;Age</h5>
+              <div class="input-group">
+                <input type="number" name="childAge" id="childAge" placeholder="5-16" class="form-control" min="5"
+                  max="16" step="1" required>
+              </div><br>
+
+              <h5>&ensp;Gender</h5>
+              <div class="input-group mb-3">
+                <select class="custom-select" name="childGender" id="childGender" required>
+                  <option selected>Choose...</option>
+                  <option value="Male">Male</option>
+                  <option value="Female">Female</option>
+                </select>
+              </div>
+
+
             </div>
-          </div><br>
 
-          <h5>&ensp;Your Address</h5>
-          <div class="input-group">
-            <input type="text" name="address" id="address" placeholder="Address" class="form-control" required>
-            <div class="input-group-append">
+            <div class="col-sm-4">
+
+              <h5>&ensp;Program End Date</h5>
+              <div class="input-group">
+                <input type="text" name="programEnd" id="programEnd" placeholder="MM-YYYY" class="form-control"
+                  required>
+              </div><br>
+
+              <h5>&ensp;Grade</h5>
+              <div class="input-group mb-3">
+                <select class="custom-select" name="childGrade" id="childGrade" required>
+                  <option selected>Choose...</option>
+                  <option value="0">kindergarten</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                  <option value="4">Four</option>
+                  <option value="5">Five</option>
+                  <option value="6">Six</option>
+                  <option value="7">Seven</option>
+                  <option value="8">Eight</option>
+                </select>
+              </div>
+            </div>
+
+          </div>
+
+          <hr><br>
+
+          <div class="row">
+            <div class="col-sm-6">
+              <h5>&ensp;School Name</h5>
+              <div class="input-group">
+                <input type="text" name="school" id="school" placeholder="Name with Address" class="form-control"
+                  required>
+              </div><br>
+            </div>
+
+            <div class="col-sm-6">
+              <h5>&ensp;Home Address</h5>
+              <div class="input-group">
+                <input type="text" name="homeAddress" id="homeAddress" placeholder="Full Address" class="form-control"
+                  required>
+              </div><br>
             </div>
           </div>
 
-        </div>
+          <div class="row">
+            <div class="col-sm-4">
+              <h5>&ensp;Parent's Name</h5>
+              <div class="input-group">
+                <input type="text" name="parentName" id="parentName" placeholder="Full Name" class="form-control"
+                  required>
+              </div><br>
 
-        <div class="col-sm">
-
-          <h5>&ensp;Emergency Contact Number 1</h5>
-          <div class="input-group">
-            <input type="number" name="org_password_signup" id="org_password_signup" placeholder="Enter a 10 digit number"
-              class="form-control" required>
-            <div class="input-group-append">
+              <h5>&ensp;Medical Conditions</h5>
+              <div class="input-group">
+                <input type="text" name="medicalCond" id="medicalCond" placeholder="List all known conditions"
+                  class="form-control" required>
+              </div><br>
             </div>
-          </div><br>
 
-          <h5>&ensp;Emergency Contact Number 2</h5>
-          <div class="input-group">
-            <input type="number" name="confirmPassword" id="confirmPassword" placeholder="Enter a 10 digit number"
-              class="form-control" required>
-            <div class="input-group-append">
+            <div class="col-sm-4">
+              <h5>&ensp;Phone Number</h5>
+              <div class="input-group">
+                <input type="number" name="phone" id="phone" placeholder="902XXXYYYY" class="form-control"
+                  min="1000000000" max="9999999999" step="1" required>
+              </div><br>
+
+              <h5>&ensp;Emergency Contact Name</h5>
+              <div class="input-group">
+                <input type="text" name="emergName" id="emergName" placeholder="Full Name" class="form-control"
+                  required>
+              </div><br>
             </div>
-          </div><br>
 
-          <h5>&ensp;Child's Blood Group</h5>
-          <div class="input-group">
-            <input type="text" name="phone_number" id="phone_number" placeholder="AB+"
-              class="form-control" required>
-            <div class="input-group-append">
+            <div class="col-sm-4">
+              <h5>&ensp;Email ID</h5>
+              <div class="input-group">
+                <input type="email" name="email" id="email" placeholder="abc@xyz.com" class="form-control" required>
+              </div><br>
+
+              <h5>&ensp;Emergency Phone Number</h5>
+              <div class="input-group">
+                <input type="number" name="emergPhone" id="emergPhone" placeholder="902XXXYYYY" class="form-control"
+                  min="1000000000" max="9999999999" step="1" required>
+              </div><br>
+            </div>
+          </div>
+
+          <br>
+          <p style="font-size: 1.1rem; color: red;">In the case of an emergency, every effort will be made to contact
+            the listed name. If unable to reach any of
+            the contacts, I give permission to Novaleaf to secure proper emergency treatment while efforts to locate
+            parent(s) continue: </p><br>
+
+          <div class="row">
+            <div class="col-sm-4">
+              <h5>&ensp;Signature</h5>
+              <div class="input-group">
+                <input type="text" name="initials" id="initials" placeholder="Initials/Full Name" class="form-control"
+                  required>
+              </div><br>
+            </div>
+            <div class="col-sm-4">
+              <h5>&ensp;Relationship</h5>
+              <div class="input-group">
+                <input type="text" name="relationship" id="relationship" placeholder="Mother/Father/Uncle"
+                  class="form-control" required>
+              </div><br>
+            </div>
+            <div class="col-sm-4">
+              <h5>&ensp;Date</h5>
+              <div class="input-group">
+                <input type="text" name="date" id="date" placeholder="MM-DD-YYYY" class="form-control" required>
+              </div><br>
+            </div>
+          </div>
+
+          <hr>
+          <div class="row">
+            <div class="col-sm-4">
+              <br>
+              <h5>&ensp;How did you find out about us?</h5>
+              <div class="input-group mb-3">
+                <select class="custom-select" name="socialMedia" id="socialMedia" required>
+                  <option selected>Choose...</option>
+                  <option value="School">School</option>
+                  <option value="Online Search">Online Search</option>
+                  <option value="Social Media">Social Media</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-4">
+              <br>
+              <h5>&ensp;Can you provide your kid iPad for the Robotic Coding Programs?</h5>
+              <div class="input-group mb-3">
+                <select class="custom-select" name="iPad" id="iPad" required>
+                  <option selected>Choose...</option>
+                  <option value="Yes">Yes</option>
+                  <option value="No">No</option>
+                </select>
+              </div>
             </div>
           </div>
           <br>
+          <p style="font-size: 1.1rem; color: red;">By making this application to enroll my child in NOVALEAF
+            INTERNATIONAL EDUCATION CONSULTING INC., I agree and consent to the NOVALEAF Program Policy
+            Agreement.</p><br>
+
+          <div class="row">
+            <div class="col-sm-4">
+              <h5>&ensp;Signature</h5>
+              <div class="input-group">
+                <input type="text" name="fullName" id="fullName" placeholder="Full Name" class="form-control" required>
+              </div><br>
+            </div>
+            <div class="col-sm-4">
+              <h5>&ensp;Print Name</h5>
+              <div class="input-group">
+                <input type="text" name="initials2" id="initials2" placeholder="Initials" class="form-control" required>
+              </div><br>
+            </div>
+            <div class="col-sm-4">
+              <h5>&ensp;Date</h5>
+              <div class="input-group">
+                <input type="text" name="date2" id="date2" placeholder="MM-DD-YYYY" class="form-control" required>
+              </div><br>
+            </div>
+          </div>
+
+          <br>
+          <p style="font-size: 1.1rem; color: red;">Registration cannot be confirmed unless the form is accompanied by
+            an e-transfer to novaleafedu@gmail.com OR a cash payable at our front desk.
+          </p><br>
+
         </div>
-      </div>
-      <center><button id="btnSignup" class="mr-auto btn btn-info my-2 my-lg-3" type="button">Submit</button>
-      </center>
+
+        <center><button class="primary-btn mt-20" onclick="kidstore()">Register<span
+              class="lnr lnr-phone"></span></button>
+        </center>
     </div>
     <br><br>
-  </form>
+    </form>
+  </div>
+
+  </div>
+  <br><br>
+
 
 </body>
 

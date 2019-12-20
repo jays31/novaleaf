@@ -7,65 +7,29 @@
 
 module.exports = {
   attributes: {
-    childName:{
-      type: 'string',
-      required: true,
-    },
-    childEmail:{
-      type: 'string',
-      required: true,
-    },
-    childAge:{
-      type: 'number',
-      required: true,
-    },
-    childGrade:{
-      type: 'number',
-      required: true,
-    },
-    childDOB:{
-      type: 'string',
-      required: true,
-    },
-    childGender:{
-      type: 'string',
-      required: true,
-    },
-    childSchool:{
-      type: 'string',
-      required: true,
-    },
-    childAddress:{
-      type: 'string',
-      required: true,
-    },
-    childParentName:{
-      type: 'string',
-      required: true,
-    },
-    childMedicalCond:{
-      type: 'string',
-      required: true,
-    },
-    childEmergencyContactName:{
-      type: 'string',
-      required: true,
-    },
-    childEmergencyContactPhone:{
-      type: 'number',
-      required: true,
-    },
-    childRelationship:{
-      type: 'string',
-      required: true,
-    },
-    childBloodGroup:{
-      type: 'string',
-      required: true,
-    },
-    findAboutUs:{
-      type: 'string',
-      required: true,
-    },
+    program:      { type: 'string', required: true, },
+    programStart: { type: 'string', required: true, },
+    programEnd:   { type: 'string', required: true, },
+    childName:    { type: 'string', required: true, },
+    childAge:     { type: 'string', required: true, },
+    childGrade:   { type: 'string', required: true, },
+    childDOB:     { type: 'string', required: true, },
+    childGender:  { type: 'string', required: true, },
+    school:       { type: 'string', required: true, },
+    homeAddress:  { type: 'string', required: true, },
+    parentName:  { type: 'string', required: true, },
+    phone:        { type: 'string', required: true, },
+    email:        { type: 'string', required: true, },
+    medicalCond:  { type: 'string', required: true, },
+    emergName:    { type: 'string', required: true, },
+    emergPhone:   { type: 'string', required: true, },
+    initials:     { type: 'string', required: true, },
+    relationship: { type: 'string', required: true, },
+    date:         { type: 'string', required: true, },
+    socialMedia:  { type: 'string', required: true, },
+    iPad:         { type: 'string', required: true, },
+    fullName:     { type: 'string', required: true, },
+    initials2:    { type: 'string', required: true, },
+    date2:        { type: 'string', required: true, },
   },
 };

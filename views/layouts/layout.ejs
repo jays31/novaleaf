@@ -64,19 +64,29 @@
       <div class="collapse navbar-collapse justify-content-end align-items-center" id="navbarSupportedContent">
         <ul class="navbar-nav">
           <li><a href="/about">About</a></li>
-          <li><a href="/kids">Kids</a></li>
+
+          <li class="dropdown">
+            <a class="dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Kids</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="/kids">Programs</a>
+              <a class="dropdown-item" href="/time-table">Time Table</a>
+              <a class="dropdown-item" href="/register">Register</a>
+            </div>
+          </li>
+
           <li><a href="/adults">Adults</a></li>
           <li><a href="/camps">Camps</a></li>
           <li><a href="/events">Events</a></li>
           <li><a href="/birthday">Party Design</a></li>
-          <li><a href="/contact-us">Contact Us</a></li>
+
           <li class="dropdown">
-            <a class="dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Admin</a>
+            <a class="dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Contact Us</a>
             <div class="dropdown-menu">
-              <a class="dropdown-item" href="/sign-in">Sign-in</a>
-              <a class="dropdown-item" href="/time-table">Time Table</a>
+              <a class="dropdown-item" href="/contact-us">Parents</a>
+              <a class="dropdown-item" href="/partnership">Partnership</a>
             </div>
           </li>
+
         </ul>
       </div>
     </div>
@@ -91,17 +101,17 @@
           <div class="col-sm-6 col-md-3 item">
             <h3 style="color:#a0a7ac;">Kids</h3>
             <ul>
-              <li><a href="#">Programs</a></li>
-              <li><a href="#">Events</a></li>
-              <li><a href="#">Camps</a></li>
+              <li><a href="/kids">Programs</a></li>
+              <li><a href="/events">Events</a></li>
+              <li><a href="/camps">Camps</a></li>
             </ul>
           </div>
           <div class="col-sm-6 col-md-3 item">
             <h3 style="color:#a0a7ac;">Adults</h3>
             <ul>
-              <li><a href="#">IELTS</a></li>
-              <li><a href="#">Resume Writing</a></li>
-              <li><a href="#">Mock Interviews</a></li>
+              <li><a href="/adults">IELTS</a></li>
+              <li><a href="/adults">Resume Writing</a></li>
+              <li><a href="/adults">Fit in your Career</a></li>
             </ul>
           </div>
           <div class="col-md-3 item text">
@@ -111,7 +121,7 @@
           </div>
           <div class="col-md-3 item text">
             <!-- PayPal Logo -->
-            <table border="0" cellpadding="0" cellspacing="0" align="center">
+            <!-- <table border="0" cellpadding="0" cellspacing="0" align="center">
               <tr>
                 <td align="center"></td>
               </tr>
@@ -122,7 +132,14 @@
                       alt="Secured by PayPal"></a>
                 </td>
               </tr>
-            </table><!-- PayPal Logo -->
+            </table> -->
+            <!-- PayPal Logo -->
+            <h3 style="color:#a0a7ac;">Admin</h3>
+            <ul>
+              <li><a href="/sign-in">Sign-in</a></li>
+              <li><a href="/register">Register Student</a></li>
+            </ul>
+
           </div>
           <div class="col item social">
             <a href="https://www.facebook.com/NovaleafHalifax/" target="_blank">
